@@ -1,0 +1,71 @@
+.icons {
+    /*    border: 2px solid black;*/
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.icons a {
+    text-decoration: none !important;
+    color: white;
+    padding: 10px;
+    font-size: 22px;
+    margin: 2px;
+    border-radius: 0 50px 50px 0;
+    transform: translate(-135px, 0px);
+    transition: all 1s;
+    font-weight: bold;
+}
+
+.icons a:hover {
+    transform: translate(0, 0);
+    color: white;
+
+}
+
+.phone {
+    background-color: #5556b5;
+    color: #f9e634;
+}
+
+.whatsapp {
+    background-color: #4AC959;
+    color: White;
+}
+
+.location {
+    background-color: #EA4335;
+    color: #f9e634;
+}
+
+.instagram {
+    background-color: #bc2a8d;
+    color: white;
+}
+
+.icons a span {
+    margin-left: 20px;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    color: #EA4335;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.icons a span.fa-phone {
+    color: #5556b5;
+}
+
+.icons a span.fa-whatsapp {
+    color: #4AC959;
+}
+
+.icons a span.location {
+    color: #5556b5;
+}

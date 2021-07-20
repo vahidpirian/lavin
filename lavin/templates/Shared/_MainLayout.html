@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    {% include "Shared/_HeaderReferences.html" %}
+    <title>Title</title>
+</head>
+<body>
+{% include "Shared/nav.html" %}
+{% include "Shared/contact-icons.html" %}
+{% block content %}
+
+{% endblock %}
+{% include 'before_footer.html' %}
+{% include 'Shared/Footer.html' %}
+{% include "Shared/_FooterReferences.html" %}
+</body>
+</html>

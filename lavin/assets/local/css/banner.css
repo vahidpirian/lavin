@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.lavin-home {
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.lavin-home .lavin-slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: none;
+    padding: 0 15px;
+    animation: slide 2s ease;
+}
+
+.lavin-home .lavin-slide.active {
+    display: flex;
+}
+
+@keyframes slide {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.lavin-banner-container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.lavin-home .lavin-banner-container {
+    flex-grow: 1;
+}
+
+.lavin-home .lavin-caption {
+    width: 50%;
+}
+
+.lavin-home .lavin-caption h1{
+    font-size: 42px;
+    color: #000000;
+    margin: 0;
+}
+
+.lavin-home .lavin-slide.active .lavin-caption h1 {
+    animation: captionText .5s forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+.lavin-home .lavin-caption p {
+    font-size: 18px;
+    margin: 15px 0 30px;
+    color: #222222;
+}
+
+.lavin-home .lavin-slide.active .lavin-caption p {
+    animation: captionText .5s forwards;
+    opacity: 0;
+    animation-delay: 1.2s;
+}
+
+.lavin-home .lavin-caption a {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #000000;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.lavin-home .lavin-slide.active .lavin-caption a {
+    animation: captionText .5s forwards;
+    opacity: 0;
+    animation-delay: 1.4s;
+}
+
+@keyframes captionText {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.lavin-home .lavin-controls .prev,
+.lavin-home .lavin-controls .next {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    color: #ffffff;
+    background-color: #f6d70e;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.lavin-home .lavin-controls .prev {
+    left: 0;
+}
+
+.lavin-home .lavin-controls .next {
+    right: 0;
+}
+
+.lavin-home .lavin-controls .prev:hover,
+.lavin-home .lavin-controls .next:hover {
+    background-color: #303a58;
+}
+
+@media screen and (max-width: 768px) {
+    .lavin-home .lavin-caption h1 {
+        width: 100%;
+        font-size: 15px;
+    }
+    .lavin-home .lavin-caption p {
+        font-size: 10px;
+    }
+}

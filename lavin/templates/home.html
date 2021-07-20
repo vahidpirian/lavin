@@ -1,0 +1,61 @@
+{% extends 'Shared/_MainLayout.html' %}
+{% load static %}
+{% load render_partial %}
+{% block content %}
+{% render_partial 'banner_partial' %}
+<div class="container">
+    <div class="Logo">
+    <div class="row col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="{% static 'images/Botox.jpg' %}" alt="...">
+            <div class="caption">
+                <h4>بوتاکس</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="{% static 'images/Laser.jpg' %}" alt="...">
+            <div class="caption">
+                <h4>بوتاکس</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="{% static 'images/Botox.jpg' %}" alt="...">
+            <div class="caption">
+                <h4>بوتاکس</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="{% static 'images/Rezayat.jpg' %}" alt="...">
+            <div class="caption">
+                <h4>بوتاکس</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="{% static 'images/Filler.jpg' %}" alt="...">
+            <div class="caption">
+                <h4>بوتاکس</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="{% static 'images/Filler.jpg' %}" alt="...">
+            <div class="caption">
+                <h4>بوتاکس</h4>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% render_partial 'gallery_list_partial' %}
+{% include "Shared/Recent_Post.html" %}
+{% include "Shared/Blog-Post.html" %}
+{% endblock %}

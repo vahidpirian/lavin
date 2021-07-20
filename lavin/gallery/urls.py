@@ -1,0 +1,8 @@
+from django.urls import path
+from .views import GalleryListView, Gallery_Category, GalleryListByCategory
+
+urlpatterns = [
+    path("gallery", GalleryListView.as_view()),
+    path('gallery/<gallery_name>', GalleryListByCategory.as_view()),
+    path('gallery_category_partial', Gallery_Category, name="gallery_category_partial")
+]

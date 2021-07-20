@@ -1,0 +1,55 @@
+{% extends "Shared/_MainLayout.html" %}
+{% load static %}
+{% load render_partial %}
+{% block content %}
+
+<!--<div class="detail-article">-->
+    <div class="container detail-article">
+        <div class="col-md-4">
+            <h5 class="detail-heading">مقالات مرتبط</h5>
+            {% for article_list in related_articles %}
+            {% for article in article_list %}
+            <div class="horizontal_card">
+                <img src="{{ article.image.url }}" alt="">
+                <div class="horizontal_card_body">
+                    <a href="#">{{ article.title }}</a>
+                    <div class="blog_details">
+                        <i class="fas fa-user"><span>admin</span></i>
+                        <i class="fas fa-calendar-alt"><span>20/11/2020</span></i>
+                    </div>
+                    <p class="blog_desc">
+                        {{ article.description | truncatewords:10 }}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+            {% endfor %}
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="wrapper">
+                        <div class="sidebar">
+                          {% render_partial 'articles_categories_partial' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="vertical_card">
+                <img src="{{ article.image.url }}" alt="">
+                <div class="vertical_card_body">
+                    <a href="#">{{ article.title }}</a>
+                    <div class="blog_details">
+                        <i class="fas fa-user"><span>admin</span></i>
+                        <i class="fas fa-calendar-alt"><span>20/11/2020</span></i>
+                    </div>
+                    <p class="blog_desc">
+                        {{ article.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--</div>-->
+{% include "Shared/Recent_Post.html" %}
+{% endblock %}

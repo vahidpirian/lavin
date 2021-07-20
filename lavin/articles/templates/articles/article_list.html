@@ -1,0 +1,78 @@
+{% extends "Shared/_MainLayout.html" %}
+{% load static %}
+{% load render_partial %}
+{% block content %}
+<section class="latest-news-area" id="latest">
+    <div class="container">
+        <div class="row">
+            <div>
+                <div class="test-sidebar">
+                <div class="col-md-3 col-sm-2">
+                    <div class="wrapper">
+                        <div class="sidebar">
+                            {% render_partial 'articles_categories_partial' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news-active">
+                {% for article in object_list %}
+                <div class="col-md-3">
+                    <div class="latest-news-wrap">
+                        <div class="news-img">
+                            <img src="{{ article.image.url }}" alt="" class="img-responsive">
+                            <div class="deat">
+                                <span>10</span>
+                                <span>Feb</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-telegram"></i>
+                            <i class="fa fa-whatsapp"></i>
+                            <i class="fa fa-instagram"></i>
+                            <h4>
+                                {{ article.title }}
+                            </h4>
+                            <p>
+                                {{ article.description | truncatewords:15 }}
+                            </p><br>
+                            <a href="">بیشتر بخوانید</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+<div class="container page">
+    <div class="row">
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}">صفحه قبلی</a></li>
+                {% endif %}
+                {% for page in paginator.page_range %}
+                {% if page == page_obj.number %}
+                <li class="active"><a href="?page={{ page }}">{{ page }}</a></li>
+                {% else %}
+                <li><a href="?page={{ page }}">{{ page }}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.paginator.num_pages }}">صفحه بعدی</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+
+{% include "Shared/Recent_Post.html" %}
+{% endblock %}

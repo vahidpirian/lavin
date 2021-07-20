@@ -1,0 +1,21 @@
+{% load static %}
+<section class="lavin-gallery-home" id="latest">
+    <div class="container">
+        <div class="row">
+
+            <div class="lavin-image-home">
+                {% for page in latest_gallery %}
+                    <div class="col-md-3">
+                    <div class="video-container">
+                        <div class="video">
+                            <video src="{% static 'videos/video1.mp4' %}"></video>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+</section>
