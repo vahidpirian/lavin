@@ -1,12 +1,14 @@
 .detail-heading {
     font-size: 29px;
     letter-spacing: 3px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-.vahid {
+/*.vahid {
     display: flex;
 
-}
+}*/
 
 .detail-article {
     background: white;
@@ -26,6 +28,10 @@
     width: auto;
     height: auto;
     margin: 10px 18px;
+}
+
+.vertical_card {
+    margin-top: 10px;
 }
 
 .vertical_card img {
@@ -49,6 +55,8 @@
     margin-bottom: 2px;
     /*height: 192px;*/
     overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
 }
 
 .horizontal_card img {
@@ -66,9 +74,9 @@
 
 .horizontal_card_body a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     color: black;
-    font-weight: 700;
+    font-weight: bold;
     margin: 8px 0;
     padding: 20px;
 }
@@ -84,6 +92,11 @@
     margin: 12px 0;
 }
 
+.vertical_card {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
 .blog_details i {
     margin-right: 20px;
     font-weight: 400;
@@ -92,12 +105,16 @@
 
 .blog_details {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
+    margin-top: 40px;
 }
 
 .blog_details i span {
-    margin-right: 200px;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    padding: 10px;
 }
 
 .blog_desc {
@@ -105,6 +122,7 @@
     letter-spacing: 1px;
     font-weight: 600;
     line-height: 30px;
+    margin-top: 30px;
 }
 
 .col-sm-10 {
@@ -113,23 +131,43 @@
 
 .blog_details .fa {
     padding: 10px 10px;
-    font-size: 20px;
-}
-
-.blog_details .fa-facebook {
-    color: #3b5995;
+    font-size: 30px;
 }
 
 .blog_details .fa-telegram {
+    border-radius: 5px;
     color: #0084b4;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s ease;
+}
+
+.blog_details .fa-telegram:hover {
+    color: #ffffff;
+    background-color: #0084b4;
 }
 
 .blog_details .fa-whatsapp {
+    border-radius: 5px;
     color: #34af23;
+    transition: 0.5s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog_details .fa-whatsapp:hover {
+    background-color: #34af23;
+    color: #ffffff;
 }
 
 .blog_details .fa-instagram {
+    border-radius: 5px;
     color: red;
+    transition: 0.5s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog_details .fa-instagram:hover {
+    color: #ffffff;
+    background-color: red;
 }
 
 /*############### RESPONSIVE ##################*/

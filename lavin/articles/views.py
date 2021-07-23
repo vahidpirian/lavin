@@ -50,7 +50,7 @@ def ArticleDetailView(requset, **kwargs):
     related_articles = Article.objects.get_queryset().filter(categories__article=article)
     grouped_articles = grouper(4, related_articles)
     latest_articles = Article.objects.order_by('-id').all()[:4]
-    print(grouped_articles)
+    # date_time = Article.objects.jalali_date_time(date)
     if article is None:
         raise Http404("موجود نیست")
     context = {

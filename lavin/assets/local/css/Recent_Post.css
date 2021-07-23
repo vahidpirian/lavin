@@ -92,6 +92,11 @@
     transition: all 0.5s ease-in;
 }
 
+.news-content h5 {
+    font-weight: bold;
+    line-height: 20px;
+}
+
 .news-content a:hover {
     font-size: 14px;
     border: 1px solid #34495e;

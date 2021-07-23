@@ -30,13 +30,14 @@
                             <i class="fa fa-telegram"></i>
                             <i class="fa fa-whatsapp"></i>
                             <i class="fa fa-instagram"></i>
-                            <h4>
-                                {{ article.title | truncatewords:10 }}
-                            </h4>
-                            <p>
+                            <h5>
+                                {{ article.title | truncatewords:5 }}
+                            </h5>
+                            <!--<p>
                                 {{ article.description | truncatewords:10 | safe }}
-                            </p><br>
-                            <a href="">بیشتر بخوانید</a>
+                            </p>-->
+                            <br>
+                            <a href="{{ article.get_absolute_url }}">بیشتر بخوانید</a>
                         </div>
                     </div>
                 </div>

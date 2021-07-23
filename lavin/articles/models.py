@@ -4,8 +4,6 @@ from Category.models import Category
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.utils import timezone
-from django_jalali.db import models as jmodels
-# Create your models here.
 
 
 class ArticleManager(models.Manager):
@@ -30,10 +28,8 @@ class ArticleManager(models.Manager):
 class Article(models.Model):
     title = models.CharField(max_length=200, verbose_name="عنوان")
     description = RichTextUploadingField(blank=True, null=True, verbose_name="توضیحات")
-    #description = models.TextField(max_length=1000000, verbose_name="توضیحات")
+    # description = models.TextField(max_length=1000000, verbose_name="توضیحات")
     image = models.FileField(upload_to="Articles/", null=True, blank=True, verbose_name="تصاویر")
-    active = models.BooleanField(default=False, verbose_name="فعال/غیرفعال")
-    featured = models.BooleanField(default=False)
     categories = models.ManyToManyField(Category, blank=True, verbose_name="دسته بندی ها")
 
     objects = ArticleManager()
@@ -44,3 +40,6 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return f"/article/{self.id}/{self.title.replace(' ', '-')}"

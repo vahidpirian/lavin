@@ -7,6 +7,10 @@
     background-color: #878787;
 }
 
+.test-sidebar {
+    margin-top: 10px;
+}
+
 .pagination > li > a
 {
     background-color: #e0ad23 !important;
@@ -22,7 +26,6 @@ nav ul li a:active {
 .articles {
     /*display: flex;*/
     margin: 50px;
-
 }
 
 .latest-news-area-article {
@@ -30,12 +33,14 @@ nav ul li a:active {
     margin-bottom: 40px;
 }
 
+.lavin-area-article {
+    margin-top: 50px;
+}
+
 .news-active-article {
     display: flex;
     flex-wrap: wrap;
 }
-
-
 
 .article-row {
     width: 85%;

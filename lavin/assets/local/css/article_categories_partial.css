@@ -1,6 +1,6 @@
 .wrapper {
     position: relative;
-    margin-top: 13px;
+    margin-top: 20px;
 }
 .wrapper .sidebar {
     background: white;
@@ -8,6 +8,11 @@
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     text-decoration: none;
 }
+
+.row-category {
+    width: 450px;
+}
+
 .wrapper .sidebar h2 {
     color: #000;
     text-align: center;

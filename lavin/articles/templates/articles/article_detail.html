@@ -15,10 +15,10 @@
             </div>
             <div class="horizontal_card_body">
                 <a href="#">{{ article.title }}</a>
-                <div class="blog_details">
-                    <!--<i class="fas fa-user"><span>admin</span></i>-->
-                    <i class="fas fa-calendar-alt"><span>{{ article.date }}</span></i>
-                </div>
+                <!--<div class="blog_details">
+                    &lt;!&ndash;<i class="fas fa-user"><span>admin</span></i>&ndash;&gt;
+                    <i><span>{{ article.date }}</span></i>
+                </div>-->
                 <!--<p class="blog_desc">
                     {{ article.description | truncatewords:5 | safe }}
                 </p>-->
@@ -26,7 +26,7 @@
         </div>
         {% endfor %}
         {% endfor %}
-        <div class="row">
+        <div class="row row-category">
             <div class="col-sm-10">
                 <div class="wrapper">
                     <div class="sidebar">
@@ -41,17 +41,21 @@
             <img src="{{ article.image.url }}" alt="">
             <div class="vertical_card_body">
                 <a href="#">{{ article.title }}</a>
-                <div class="blog_details">
-                    <!--<i class="fas fa-user"><span>admin</span></i>-->
-                    <i class="fa fa-facebook"></i>
-                    <i class="fa fa-telegram"></i>
-                    <i class="fa fa-whatsapp"></i>
-                    <i class="fa fa-instagram"></i>
-                    <i class="fas fa-calendar-alt"><span>{{ article.date }}</span></i>
-                </div>
+
                 <p class="blog_desc">
                     {{ article.description | safe }}
                 </p>
+                <div class="blog_details">
+                    <!--<i class="fas fa-user"><span>admin</span></i>-->
+                    <!--<i class="fa fa-facebook"></i>-->
+                    <i><span>اشتراک گذاری</span></i>
+                    <a href="https://telegram.me/share/url?url=localhost{{ article.get_absolute_url }}"><i
+                            class="fa fa-telegram"></i></a>
+                    <a href="https://web.whatsapp.com/send?text={{ article.title }} localhost:8000{{ article.get_absolute_url }}"><i
+                            class="fa fa-whatsapp"></i></a>
+                    <i class="fa fa-instagram"></i>
+
+                </div>
             </div>
         </div>
     </div>
