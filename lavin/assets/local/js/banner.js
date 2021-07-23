@@ -1,4 +1,4 @@
-const slides = document.querySelector(".lavin-slider").children;
+const slides = document.querySelector(".lavin-slide").children;
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 let index = 0;

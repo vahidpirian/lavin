@@ -1,17 +1,3 @@
-/*.footer-row {
-    background-color: #808080;
-    color: white;
-}
-
-.text-white {
-    background-color: #808080;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.btn-link {
-    color: #f9e634 !important;
-}*/
 
 .lavin-middle {
     position: relative;
@@ -29,7 +15,7 @@
     margin: 10px;
     border-radius: 30%;
     box-shadow: 0 5px 15px -5px #00000070;
-    color: #f6d70e;
+    color: #354a6c;
     overflow: hidden;
     position: relative;
 }

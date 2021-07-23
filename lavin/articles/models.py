@@ -1,8 +1,13 @@
+from django.db.models import Q
 from django.db import models
 from Category.models import Category
-
-
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
+from django.utils import timezone
+from django_jalali.db import models as jmodels
 # Create your models here.
+
+
 class ArticleManager(models.Manager):
     def get_active_articles(self):
         return self.get_queryset().filter(active=True)
@@ -17,10 +22,15 @@ class ArticleManager(models.Manager):
         else:
             return None
 
+    def search(self, query):
+        lookup = Q(title__icontains=query) | Q(description__icontains=query)
+        return self.get_queryset().filter(lookup).distinct()
+
 
 class Article(models.Model):
     title = models.CharField(max_length=200, verbose_name="عنوان")
-    description = models.TextField(max_length=1000000, verbose_name="توضیحات")
+    description = RichTextUploadingField(blank=True, null=True, verbose_name="توضیحات")
+    #description = models.TextField(max_length=1000000, verbose_name="توضیحات")
     image = models.FileField(upload_to="Articles/", null=True, blank=True, verbose_name="تصاویر")
     active = models.BooleanField(default=False, verbose_name="فعال/غیرفعال")
     featured = models.BooleanField(default=False)

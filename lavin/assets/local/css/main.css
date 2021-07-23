@@ -6,7 +6,7 @@
 }
 
 .lavin-image-home {
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .items {
@@ -49,6 +49,10 @@
     color: white;
     font-size: 22px;
     line-height: 35px;
+}
+
+.gallery-dash {
+    margin-bottom: 20px;
 }
 
 form.frm input[type=text] {

@@ -100,3 +100,11 @@
     color: #34405e;
     text-decoration: none;
 }
+
+.dash {
+    width: 180px;
+    height: 5px;
+    margin-top: 20px;
+    background-color: #e0ad23;
+    border-radius: 2px;
+}

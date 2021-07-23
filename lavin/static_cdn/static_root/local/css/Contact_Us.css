@@ -24,13 +24,13 @@
 .lavin-section-contact .lavin-content h2 {
     font-size: 36px;
     font-weight: 500;
-    color: #006b1b;
+    color: #000000;
 
 }
 
 .lavin-section-contact .lavin-content p {
     font-weight: 300;
-    color: #006b1b;
+    color: #000000;
 }
 
 .lavin-contact-container {
@@ -69,34 +69,35 @@
     flex-direction: column;
     margin-right: 20px;
     font-size: 16px;
-    color: #006b1b;
+    color: #000000;
     font-weight: 300;
 }
 
 .lavin-contact-container .lavin-contactinfo .lavin-box .lavin-text h3 {
     font-weight: 500;
-    color: #006b1b;
+    color: #000000;
 }
 
 .lavin-contact-form {
     width: 40%;
     padding: 40px;
-    background: #bfbf8d;
+    background: #5778ad;
 }
 
 .lavin-contact-form h2 {
     font-size: 30px;
     color: #333;
     font-weight: 500;
+    margin-bottom: 50px;
 }
 
-.lavin-contact-form .lavin-inputbox {
+/*.lavin-contact-form .lavin-inputbox {
     position: relative;
     width: 100%;
     margin-top: 10px;
-}
+}*/
 
-.lavin-contact-form .lavin-inputbox input,
+/*.lavin-contact-form .lavin-inputbox input,
 .lavin-contact-form .lavin-inputbox textarea {
     width: 100%;
     padding: 5px 0;
@@ -106,9 +107,9 @@
     border-bottom: 2px solid #333;
     outline: none;
     resize: none;
-}
+}*/
 
-.lavin-contact-form .lavin-inputbox span {
+/*.lavin-contact-form .lavin-inputbox span {
     position: absolute;
     right: 0;
     padding: 5px 0;
@@ -117,21 +118,22 @@
     pointer-events: none;
     transition: 0.5s;
     color: #666;
-}
+}*/
 
-.lavin-contact-form .lavin-inputbox input:focus ~ span,
+/*.lavin-contact-form .lavin-inputbox input:focus ~ span,
 .lavin-contact-form .lavin-inputbox input:valid ~ span,
 .lavin-contact-form .lavin-inputbox textarea:valid ~ span,
 .lavin-contact-form .lavin-inputbox textarea:valid ~ span {
     color: #e91e63;
     font-size: 12px;
     transform: translateY(-20px);
-}
+}*/
 
-.lavin-contact-form .lavin-inputbox input[type="submit"] {
+.lavin-contact-form input[type="submit"] {
     width: 100px;
-    background: #006b1b;
+    background: #ff5722;
     border: none;
+    margin-top: 20px;
     cursor: pointer;
     padding: 10px;
     font-size: 18px;

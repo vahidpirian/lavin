@@ -4,14 +4,20 @@
         <div class="row">
 
             <div class="lavin-image-home">
-                {% for page in latest_gallery %}
-                    <div class="col-md-3">
+                <div class="gallery-dash">
+                    <h2>گالری تصاویر</h2>
+                <div class="dash"></div>
+                </div>
+                {% for lst_gallery in latest_gallery %}
+                {% for gallery in lst_gallery %}
+                <div class="col-md-3">
                     <div class="video-container">
                         <div class="video">
-                            <video src="{% static 'videos/video1.mp4' %}"></video>
+                            <video src="{{ gallery.image.url }}"></video>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
                 {% endfor %}
             </div>
         </div>

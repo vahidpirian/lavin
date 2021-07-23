@@ -48,11 +48,11 @@ def ArticleDetailView(requset, **kwargs):
     # article_name = kwargs['name']
     article = Article.objects.get_by_id(article_id)
     related_articles = Article.objects.get_queryset().filter(categories__article=article)
-    grouped_articles = grouper(3, related_articles)
+    grouped_articles = grouper(4, related_articles)
     latest_articles = Article.objects.order_by('-id').all()[:4]
     print(grouped_articles)
     if article is None:
-        raise get_object_or_404("موجود نیست")
+        raise Http404("موجود نیست")
     context = {
         'article': article,
         'related_articles': grouped_articles,
@@ -67,3 +67,21 @@ def Article_Category(request):
         'categories': categories
     }
     return render(request, "articles/article_categories_partial.html", context)
+
+
+class SearchArticles(ListView):
+    template_name = "articles/article_list.html"
+    paginate_by = 12
+
+    def get_context_data(self, *args, object_list=None, **kwargs):
+        latest_articles = Article.objects.order_by('-id').all()[:4]
+        context = super(SearchArticles, self).get_context_data(*args, **kwargs)
+        context['latest_articles'] = grouper(4, latest_articles)
+        return context
+
+    def get_queryset(self):
+        request = self.request
+        query = request.GET.get('q')
+        if query is not None:
+            return Article.objects.search(query)
+        return Article.objects.none()

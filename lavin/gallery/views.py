@@ -29,6 +29,12 @@ class GalleryListByCategory(ListView):
     template_name = "galleries/gallery_list.html"
     paginate_by = 12
 
+    def get_context_data(self, *args, object_list=None, **kwargs):
+        latest_article = Article.objects.order_by('-id').all()[:4]
+        context = super(GalleryListByCategory, self).get_context_data(*args, **kwargs)
+        context['latest_articles'] = grouper(4, latest_article)
+        return context
+
     def get_queryset(self):
         gallery_name = self.kwargs['gallery_name']
         gallery = Category.objects.filter(name__iexact=gallery_name).first()

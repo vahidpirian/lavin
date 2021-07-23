@@ -1,4 +1,5 @@
 {% load static %}
+{% load render_partial %}
 {% block content %}
 <footer class="footer-footer">
     <div class="main-cnt">
@@ -17,26 +18,17 @@
             <li class="link-area">
                 <h2>لینک ها</h2>
                 <ul class="box h-box">
-                    <li><a href="">خانه</a></li>
-                    <li><a href="">مقالات</a></li>
-                    <li><a href="">گالری تصاویر</a></li>
-                    <li><a href="">درباره ما</a></li>
-                    <li><a href="">تماس با ما</a></li>
+                    <li><a href="/">خانه</a></li>
+                    <li><a href="/articles">مقالات</a></li>
+                    <li><a href="/gallery">گالری تصاویر</a></li>
+                    <li><a href="/about-us">درباره ما</a></li>
+                    <li><a href="contact-us">تماس با ما</a></li>
                 </ul>
             </li>
         </ul>
 
         <ul class="import-info box">
-            <li>
-                <h2>مطالب مهم</h2>
-                <ul class="lavin-box-lavin">
-                    <li><a href="">این بوتاکس خوب است</a></li>
-                    <li><a href="">این بوتاکس خوب است</a></li>
-                    <li><a href="">این بوتاکس خوب است</a></li>
-                    <li><a href="">این بوتاکس خوب است</a></li>
-                    <li><a href="">این بوتاکس خوب است</a></li>
-                </ul>
-            </li>
+        {% render_partial 'article_list_partial' %}
         </ul>
 
         <ul class="lavin-search box">
@@ -45,7 +37,9 @@
                 <form action="" class="form-search">
                     <div class="search-box">
                         <button class="lavin-btn-lavin" type="submit">جستجو</button>
-                        <input type="text" name="" id="">
+                        <form action="/article/search" method="get">
+                            <input type="text" name="q" id="" value="{{ request.GET.q }}">
+                        </form>
                     </div>
                 </form>
             </li>
@@ -54,6 +48,12 @@
 
     <div class="footer-bottom">
         <p>تمام حقوق مادی و معنوی این وبسایت متعلق به کلینیک زیبایی لاوین می باشد.</p>
+    </div>
+
+    <div class="footer-created-by">
+        <p>
+            <a href="">طراحی شده توسط ؛ وحید پیریان<i class="fa fa-instagram"></i></a>
+        </p>
     </div>
 
 </footer>

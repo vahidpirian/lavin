@@ -2,11 +2,10 @@
 {% load static %}
 {% load render_partial %}
 {% block content %}
-<section class="latest-news-area" id="latest">
+<section class="lavin-area-article" id="latest">
     <div class="container">
         <div class="row">
-            <div>
-                <div class="test-sidebar">
+            <div class="test-sidebar">
                 <div class="col-md-3 col-sm-2">
                     <div class="wrapper">
                         <div class="sidebar">
@@ -15,16 +14,16 @@
                     </div>
                 </div>
             </div>
-            <div class="news-active">
+            <div class="news-active-article">
                 {% for article in object_list %}
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="latest-news-wrap">
                         <div class="news-img">
                             <img src="{{ article.image.url }}" alt="" class="img-responsive">
-                            <div class="deat">
+                            <!--<div class="deat">
                                 <span>10</span>
                                 <span>Feb</span>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="news-content">
                             <i class="fa fa-facebook"></i>
@@ -32,23 +31,19 @@
                             <i class="fa fa-whatsapp"></i>
                             <i class="fa fa-instagram"></i>
                             <h4>
-                                {{ article.title }}
+                                {{ article.title | truncatewords:10 }}
                             </h4>
                             <p>
-                                {{ article.description | truncatewords:15 }}
+                                {{ article.description | truncatewords:10 | safe }}
                             </p><br>
                             <a href="">بیشتر بخوانید</a>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
-
-            </div>
             </div>
         </div>
     </div>
-
-
 </section>
 
 

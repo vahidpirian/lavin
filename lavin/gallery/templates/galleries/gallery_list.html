@@ -40,12 +40,12 @@
                     </div>
                 </div>
             </div>
-            <div class="news-active">
+            <div class="news-active-article">
                 {% for page in object_list %}
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                     <div class="video-container">
                         <div class="video">
-                            <video src="{% static 'videos/video1.mp4' %}"></video>
+                            <video src="{{ page.image.url }}"></video>
                         </div>
                     </div>
                 </div>

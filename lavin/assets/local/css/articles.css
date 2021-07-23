@@ -9,21 +9,34 @@
 
 .pagination > li > a
 {
-    background-color: #33394e !important;
+    background-color: #e0ad23 !important;
 /*    background-color: #f9e634 !important;*/
-    color: #f9e634 !important;
+    color: #ffffff !important;
     /*border: 2px solid red;*/
     font-weight: bold !important;
 }
 nav ul li a:active {
-    background-color: #f9e634 !important;
-    color: #33394e !important;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
 }
 .articles {
     /*display: flex;*/
     margin: 50px;
 
 }
+
+.latest-news-area-article {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.news-active-article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
 .article-row {
     width: 85%;
     margin-top: 15px;
@@ -34,6 +47,7 @@ nav ul li a:active {
     width: 20%;
     order: -1;
 }*/
+
 @media screen and (max-width: 768px){
     .articles {
 
