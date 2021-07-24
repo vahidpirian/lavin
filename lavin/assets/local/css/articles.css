@@ -54,11 +54,16 @@ nav ul li a:active {
 }*/
 
 @media screen and (max-width: 768px){
-    .articles {
-
+    .news-active-article {
+        flex-wrap: wrap-reverse;
         /*align-content: center;*/
     }
     .article-row {
         /*order: -1;*/
     }
+
+    .latest-news-wrap {
+        order: -1;
+    }
+
 }
