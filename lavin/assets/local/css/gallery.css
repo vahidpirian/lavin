@@ -66,6 +66,12 @@
         width: 400px;
         height: 400px;
     }
+
+    .lavin-container-gallery {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
 }
 
 @media screen and (max-width: 1024px) {

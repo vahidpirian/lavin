@@ -82,13 +82,13 @@ form.frm button {
 }
 
 form.example::after {
-  content: "";
-  clear: both;
-  display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 form.example button:hover {
-  background: #0b7dda;
+    background: #0b7dda;
 }
 
 .items a:link {
@@ -166,14 +166,13 @@ form.example button:hover {
 
 .btn-primary {
     background-color: #5556b5 !important;
-/*    background-color: #f9e634 !important;*/
+    /*    background-color: #f9e634 !important;*/
     color: #f9e634 !important;
     border-color: black !important;
     /*border-color: #f9e634 !important;*/
 }
 
 /* ############# START ARTICLES #############*/
-
 
 
 /* ############# END ARTICLES #############*/
@@ -215,10 +214,12 @@ form.example button:hover {
     width: 500px !important;
 }
 
+
 /*
 ############   BANNER   ###############*/
-/*.hdr-content {
-    max-width: 650px;
-    margin: 100px;
-    margin-top: 150px;
-}*/
+
+@media screen and (max-width: 768px) {
+    .lavin-home-gallery {
+        margin-bottom: 1000px;
+    }
+}

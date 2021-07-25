@@ -7,12 +7,11 @@
 .lavin-section-contact {
     position: relative;
     min-height: 100vh;
-    padding: 50px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url("static_cdn/static_root/images/Botox.jpg");
+    /*background: url("static_cdn/static_root/images/Botox.jpg");*/
     background-size: cover;
 }
 
@@ -91,43 +90,14 @@
     margin-bottom: 50px;
 }
 
-/*.lavin-contact-form .lavin-inputbox {
-    position: relative;
-    width: 100%;
-    margin-top: 10px;
-}*/
-
-/*.lavin-contact-form .lavin-inputbox input,
-.lavin-contact-form .lavin-inputbox textarea {
-    width: 100%;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    border: none;
-    border-bottom: 2px solid #333;
-    outline: none;
-    resize: none;
-}*/
-
-/*.lavin-contact-form .lavin-inputbox span {
-    position: absolute;
-    right: 0;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    pointer-events: none;
-    transition: 0.5s;
-    color: #666;
-}*/
-
-/*.lavin-contact-form .lavin-inputbox input:focus ~ span,
+.lavin-contact-form .lavin-inputbox input:focus ~ span,
 .lavin-contact-form .lavin-inputbox input:valid ~ span,
 .lavin-contact-form .lavin-inputbox textarea:valid ~ span,
 .lavin-contact-form .lavin-inputbox textarea:valid ~ span {
     color: #e91e63;
     font-size: 12px;
     transform: translateY(-20px);
-}*/
+}
 
 .lavin-contact-form input[type="submit"] {
     width: 100px;
@@ -140,15 +110,14 @@
 }
 
 @media (max-width: 991px) {
-    .lavin-section-contact {
-        padding: 50px;
-    }
     .lavin-contact-container {
         flex-direction: column;
     }
+
     .lavin-contact-container .lavin-contactinfo {
         margin-bottom: 40px;
     }
+
     .lavin-contact-container .lavin-contactinfo,
     .lavin-contact-form {
         width: 100%;

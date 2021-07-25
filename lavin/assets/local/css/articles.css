@@ -48,10 +48,6 @@ nav ul li a:active {
     flex-wrap: wrap-reverse;
     flex-direction: row;
 }
-/*.side-side {
-    width: 20%;
-    order: -1;
-}*/
 
 @media screen and (max-width: 768px){
     .news-active-article {
@@ -59,11 +55,21 @@ nav ul li a:active {
         /*align-content: center;*/
     }
     .article-row {
-        /*order: -1;*/
+        order: 1;
+    }
+
+    .lavin-area-article {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .lavin-container-article {
+        display: flex;
+        flex-wrap: wrap-reverse;
     }
 
     .latest-news-wrap {
-        order: -1;
+        /*order: -1;*/
     }
 
 }

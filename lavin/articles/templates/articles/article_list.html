@@ -3,10 +3,10 @@
 {% load render_partial %}
 {% block content %}
 <section class="lavin-area-article" id="latest">
-    <div class="container">
-        <div class="row">
+    <div class="container lavin-container-article">
+       <!-- <div class="row">-->
             <div class="test-sidebar">
-                <div class="col-md-3 col-sm-2">
+                <div class="col-md-3">
                     <div class="wrapper">
                         <div class="sidebar">
                             {% render_partial 'articles_categories_partial' %}
@@ -43,7 +43,7 @@
                 </div>
                 {% endfor %}
             </div>
-        </div>
+       <!-- </div>-->
     </div>
 </section>
 

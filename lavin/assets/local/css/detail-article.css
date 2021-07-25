@@ -173,10 +173,19 @@
         width: 300px;
     }
 
-    .article-row {
+    .detail-article  {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .latest-news-area {
+        order: 5;
+    }
+
+    /*.article-row {
         width: 100%;
         order: 1;
-    }
+    }*/
 
     .blog_details {
         display: flex;
