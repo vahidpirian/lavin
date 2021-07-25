@@ -4,7 +4,7 @@
                 {% for lst_article in latest_article %}
                 {% for article in lst_article %}
                 <ul class="lavin-box-lavin">
-                    <li><a href="">{{ article.title }}</a></li>
+                    <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
                 </ul>
                 {% endfor %}
                 {% endfor %}
