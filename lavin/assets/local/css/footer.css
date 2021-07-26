@@ -128,7 +128,7 @@
     color: #999;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .footer-footer {
         width: 100%;
         position: relative;

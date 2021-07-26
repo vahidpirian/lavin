@@ -3,46 +3,21 @@
 {% load render_partial %}
 {% block content %}
 
-<!--<div class="container-gallery">
-    <div class="heading">گالری تصاویر</div>
-    <div class="video-container">
-        <div class="video">
-            <video src="{% static 'videos/video1.mp4' %}"></video>
-        </div>
-        <div class="video">
-            <img src="{% static 'images/Botox.jpg' %}" alt="">
-        </div>
-        <div class="video">
-            <img src="{% static 'images/Botox.jpg' %}" alt="">
-        </div>
-        <div class="video">
-            <img src="{% static 'images/Botox.jpg' %}" alt="">
-        </div>
-        <div class="video">
-            <img src="{% static 'images/Botox.jpg' %}" alt="">
-        </div>
-        <div class="video">
-            <img src="{% static 'images/Botox.jpg' %}" alt="">
-        </div>
-    </div>
-</div>-->
-
-
 <section class="latest-news-area" id="latest">
     <div class="container">
         <div class="row lavin-container-gallery">
             <div class="test-sidebar">
                 <div class="col-md-3">
                     <div class="wrapper">
-                        <div class="sidebar">
+                        <div class="sidebar  category-box">
                             {% render_partial 'gallery_category_partial' %}
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="news-active-article">
+            <div class="news-active-gallery">
                 {% for page in object_list %}
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-box">
                     <div class="video-container">
                         <div class="video">
                             <video src="{{ page.image.url }}"></video>
