@@ -3,27 +3,21 @@
 {% load render_partial %}
 {% block content %}
 <section class="lavin-area-article" id="latest">
-    <div class="container lavin-container-article">
-       <!-- <div class="row">-->
-            <div class="test-sidebar">
-                <div class="col-md-3">
+    <div class="container">
+        <div class="row lavin-container-article">
+                <div class="col-md-3 col-sm-12 col-xs-12">
                     <div class="wrapper">
                         <div class="sidebar">
                             {% render_partial 'articles_categories_partial' %}
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="news-active-article">
                 {% for article in object_list %}
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="latest-news-wrap">
                         <div class="news-img">
                             <img src="{{ article.image.url }}" alt="" class="img-responsive">
-                            <!--<div class="deat">
-                                <span>10</span>
-                                <span>Feb</span>
-                            </div>-->
                         </div>
                         <div class="news-content">
                             <i class="fa fa-facebook"></i>
@@ -43,7 +37,7 @@
                 </div>
                 {% endfor %}
             </div>
-       <!-- </div>-->
+        </div>
     </div>
 </section>
 

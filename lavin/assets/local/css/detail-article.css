@@ -168,24 +168,11 @@
 /*############### RESPONSIVE ##################*/
 
 @media screen and (max-width: 768px) {
-
-    .sidebar {
-        width: 300px;
-    }
-
-    .detail-article  {
+    .detail-article {
         display: flex;
         flex-wrap: wrap-reverse;
     }
 
-    .latest-news-area {
-        order: 5;
-    }
-
-    /*.article-row {
-        width: 100%;
-        order: 1;
-    }*/
 
     .blog_details {
         display: flex;
@@ -195,10 +182,16 @@
     }
 
     .horizontal_card {
-        width: 300px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .detail-article {
+        display: flex;
+        flex-wrap: wrap-reverse;
     }
 }

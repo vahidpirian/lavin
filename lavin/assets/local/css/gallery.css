@@ -19,8 +19,6 @@
 }
 
 .video-container .video {
-    height: 30rem;
-    width: 40rem;
     margin-top: 2rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
     overflow: hidden;
@@ -28,9 +26,8 @@
 }
 
 .video-container .video video {
-    height: 100%;
     width: 100%;
-    /*object-fit: cover;*/
+    object-fit: cover;
     outline: none;
     border: none;
     cursor: pointer;
@@ -64,20 +61,6 @@
     flex-wrap: wrap;
 }
 
-@media screen and (max-width: 430px) {
-    .video-container {
-        width: 330px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .category-box {
-        width: 130px;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
 @media screen and (max-width: 768px) {
     .video-container .video .active:hover {
         transition: none;
@@ -97,12 +80,6 @@
         align-items: center;
     }
 
-    .category-box {
-        width: 330px;
-        justify-content: center;
-        align-items: center;
-    }
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -117,9 +94,5 @@
         display: flex;
         flex-wrap: wrap-reverse;
         justify-content: center;
-    }
-
-    .category-box {
-        width: 700px;
     }
 }

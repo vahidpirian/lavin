@@ -14,14 +14,10 @@
             <div class="news-active">
                 {% for lst_article in latest_articles %}
                 {% for article in lst_article %}
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="latest-news-wrap">
                         <div class="news-img">
                             <img src="{{ article.image.url }}" alt="" class="img-responsive">
-                            <!--<div class="deat">
-                                <span>10</span>
-                                <span>Feb</span>
-                            </div>-->
                         </div>
                         <div class="news-content">
                             <i class="fa fa-facebook"></i>

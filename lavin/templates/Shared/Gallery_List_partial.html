@@ -2,23 +2,27 @@
 <section class="lavin-gallery-home" id="latest">
     <div class="container">
         <div class="row">
-            <div class="lavin-image-home">
-                <div class="gallery-dash">
+            <div class="col-sm-12">
+                <div class="section_title">
                     <h2>گالری تصاویر</h2>
                     <div class="dash"></div>
                 </div>
-                {% for lst_gallery in latest_gallery %}
-                {% for gallery in lst_gallery %}
-                <div class="col-sm-3">
-                    <div class="video-container">
-                        <div class="video">
-                            <video src="{{ gallery.image.url }}"></video>
+            </div>
+            <br>
+            <br>
+                <div class="gallery-home">
+                    {% for lst_gallery in latest_gallery %}
+                    {% for gallery in lst_gallery %}
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="video-container">
+                            <div class="video">
+                                <video src="{{ page.image.url }}"></video>
+                            </div>
                         </div>
                     </div>
+                    {% endfor %}
+                    {% endfor %}
                 </div>
-                {% endfor %}
-                {% endfor %}
-            </div>
         </div>
     </div>
 </section>

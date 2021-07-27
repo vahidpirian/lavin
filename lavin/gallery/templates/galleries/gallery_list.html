@@ -2,22 +2,19 @@
 {% load static %}
 {% load render_partial %}
 {% block content %}
-
 <section class="latest-news-area" id="latest">
     <div class="container">
         <div class="row lavin-container-gallery">
-            <div class="test-sidebar">
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-12 col-xs-12">
                     <div class="wrapper">
-                        <div class="sidebar  category-box">
+                        <div class="sidebar">
                             {% render_partial 'gallery_category_partial' %}
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="news-active-gallery">
                 {% for page in object_list %}
-                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-box">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="video-container">
                         <div class="video">
                             <video src="{{ page.image.url }}"></video>
@@ -28,8 +25,6 @@
             </div>
         </div>
     </div>
-
-
 </section>
 
 
@@ -56,5 +51,4 @@
 </div>
 
 {% include "Shared/Recent_Post.html" %}
-
 {% endblock %}
