@@ -1,0 +1,13 @@
+{% extends 'Shared/_MainLayout.html' %}
+{% load static %}
+{% load render_partial %}
+{% block content %}
+{% render_partial 'banner_partial' %}
+{% render_partial 'service_partial' %}
+
+<div class="lavin-home-gallery">
+    {% render_partial 'gallery_list_partial' %}
+</div>
+{% include "Shared/Recent_Post.html" %}
+{% include "Shared/Blog-Post.html" %}
+{% endblock %}

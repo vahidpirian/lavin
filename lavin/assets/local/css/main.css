@@ -2,9 +2,36 @@
     margin-top: 40px;
     margin-bottom: 40px;
     background-color: #eee;
-   /* height: 500px;*/
+    /* height: 500px;*/
     padding-bottom: 40px;
     padding-top: 40px;
+}
+
+.more-gallery {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    margin: 50px 1000px 0 0;
+    background-color: #e0ad23;
+    font-size: 14px;
+    padding: 10px 10px;
+    color: whitesmoke;
+    transition: all 0.5s ease-in;
+}
+
+.lavin-more-gallery .more-gallery:hover {
+    font-size: 14px;
+    border: 1px solid #34495e;
+    border-top-left-radius: 20px;
+    background-color: transparent;
+    color: #34405e;
+    text-decoration: none;
+}
+
+.more-gallery h2 {
+    font-size: 20px;
 }
 
 /*.lavin-image-home {

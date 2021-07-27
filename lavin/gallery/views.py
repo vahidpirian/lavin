@@ -12,7 +12,7 @@ def grouper(n, iterable):
 
 
 class GalleryListView(ListView):
-    template_name = "galleries/gallery_list.html"
+    template_name = "Files/gallery_list.html"
     paginate_by = 12
 
     def get_context_data(self, *args, object_list=None, **kwargs):
@@ -26,7 +26,7 @@ class GalleryListView(ListView):
 
 
 class GalleryListByCategory(ListView):
-    template_name = "galleries/gallery_list.html"
+    template_name = "Files/gallery_list.html"
     paginate_by = 12
 
     def get_context_data(self, *args, object_list=None, **kwargs):
@@ -42,10 +42,19 @@ class GalleryListByCategory(ListView):
             raise Http404('صفحه مورد نظر یافت نشد')
         return Gallery.objects.get_gallery_by_category(gallery_name)
 
+def Gallery_List_partial(request):
+    gallery_list = Gallery.objects.all()
+    latest_gallery = Gallery.objects.order_by('-id').all()[:4]
+    context = {
+        'gallery_list': gallery_list,
+        'latest_gallery': grouper(4, latest_gallery)
+    }
+    return render(request, "Files/gallery_list_partial.html", context)
+
 
 def Gallery_Category(request):
     galleries = Category.objects.all()
     context = {
         'galleries': galleries,
     }
-    return render(request, "galleries/gallery_category_partial.html", context)
+    return render(request, "Files/gallery_category_partial.html", context)

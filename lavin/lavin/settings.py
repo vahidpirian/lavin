@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'aboutInfo',
     'tags',
     'ckeditor',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'services',
 ]
 
 MIDDLEWARE = [

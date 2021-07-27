@@ -19,21 +19,11 @@ def Home_Page(request):
         'latest_articles': grouper(4, latest_articles),
         'banner': banner
     }
-    return render(request, "home.html", context)
+    return render(request, "Shared/home.html", context)
 
 
 def About_Us(request):
     return render(request, "about-us.html", {})
-
-
-def Gallery_List_partial(request):
-    gallery_list = Gallery.objects.all()
-    latest_gallery = Gallery.objects.order_by('-id').all()[:4]
-    context = {
-        'gallery_list': gallery_list,
-        'latest_gallery': grouper(4, latest_gallery)
-    }
-    return render(request, "Shared/Gallery_List_partial.html", context)
 
 
 def Article_List_partial(request):
