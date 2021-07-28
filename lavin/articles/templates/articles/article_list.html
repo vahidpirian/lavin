@@ -20,18 +20,23 @@
                             <img src="{{ article.image.url }}" alt="" class="img-responsive">
                         </div>
                         <div class="news-content">
-                            <i class="fa fa-facebook"></i>
-                            <i class="fa fa-telegram"></i>
-                            <i class="fa fa-whatsapp"></i>
-                            <i class="fa fa-instagram"></i>
+                            <a href="https://telegram.me/share/url?url=localhost{{ article.get_absolute_url }}">
+                                <i class="fa fa-telegram"></i>
+                            </a>
+                            <a href="https://web.whatsapp.com/send?text={{ article.title }} localhost:8000{{ article.get_absolute_url }}">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-instagram"></i>
+                            </a>
                             <h5>
-                                {{ article.title | truncatewords:5 }}
+                                {{ article.title | truncatewords:10 }}
                             </h5>
                             <!--<p>
                                 {{ article.description | truncatewords:10 | safe }}
                             </p>-->
                             <br>
-                            <a href="{{ article.get_absolute_url }}">بیشتر بخوانید</a>
+                            <a class="btn-read" href="{{ article.get_absolute_url }}">بیشتر بخوانید</a>
                         </div>
                     </div>
                 </div>

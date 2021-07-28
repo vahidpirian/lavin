@@ -1,4 +1,5 @@
 from django import forms
+from .models import ContactFormModel
 
 
 class ContactForm(forms.Form):
@@ -20,4 +21,8 @@ class ContactForm(forms.Form):
             "class": "form-control",
             "placeholder": "پیام خود را وارد کنید"
         }
-    ), label="متن", max_length=1000)
+    ), label="متن", max_length=10000)
+
+    class Meta:
+        model = ContactFormModel
+        fields = ('FullName', 'Phone', 'Text')

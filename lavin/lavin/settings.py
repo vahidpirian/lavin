@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'Category',
     'banner',
     'contactinfo',
-    'aboutInfo',
-    'tags',
+    'aboutinfo',
     'ckeditor',
     'ckeditor_uploader',
     'services',
@@ -78,6 +77,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'lavin.wsgi.application'
+
+DEFAULT_FILE_STORAGE = 'aboutinfo.models.ASCIIFileSystemStorage'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

@@ -2,7 +2,7 @@
     <div class="lavin-slider">
         {% for slide in object_list %}
         <div class="lavin-slide {{ forloop.first | yesno:'active,' }}"
-             style='background-image: url("{{ slide.image.url }}")'>
+             style="background-image: url('{{ slide.image.url }}')">
             <div class="container lavin-banner-container">
                 <div class="lavin-caption">
                     <h1>{{ slide.title }}</h1>

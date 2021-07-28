@@ -1,23 +1,25 @@
-from django.shortcuts import render
-from django.views.generic import ListView
-from .models import Contact_Us
+from django.shortcuts import render, redirect
+from django.views.generic import ListView, TemplateView
+from .models import Contact_Us, ContactFormModel
 from .forms import ContactForm
-from django.http import HttpResponse
-
-# Create your views here.
 
 
-class contact_us(ListView):
-    template_name = "contact-us.html"
+def Contact_Form(request):
+    form = ContactForm(request.POST or None)
+    object_list = Contact_Us.objects.first()
+    context = {
+        'form': form,
+        'object_list': object_list
+    }
+    if form.is_valid():
+        fullName = form.cleaned_data.get('FullName')
+        phone = form.cleaned_data.get('Phone')
+        text = form.cleaned_data.get('Text')
+        Data = ContactFormModel(FullName=fullName, Phone=phone, Text=text)
+        Data.save()
+        context['form'] = ContactForm
 
-    def get_context_data(self, *args, object_list=None, **kwargs):
-        context = super(contact_us, self).get_context_data(*args, **kwargs)
-        context["form"] = ContactForm
-        return context
-
-    def get_queryset(self):
-        return Contact_Us.objects.first()
-
+    return render(request, 'contact-us.html', context)
 
 # def WhatsAppData(phone, message, name):
 #     import time

@@ -117,5 +117,6 @@
     .lavin-contact-container .lavin-contactinfo,
     .lavin-contact-form {
         width: 100%;
+        margin-bottom: 20px;
     }
 }

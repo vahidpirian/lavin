@@ -1,8 +1,6 @@
 from django.db import models
 
 
-# Create your models here.
-
 class Contact_Us(models.Model):
     title = models.CharField(max_length=30, verbose_name='عنوان')
     description = models.CharField(max_length=500, verbose_name='توضیحات')
@@ -18,3 +16,16 @@ class Contact_Us(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ContactFormModel(models.Model):
+    FullName = models.CharField(max_length=128, verbose_name="نام و نام خانوادگی")
+    Phone = models.CharField(max_length=128, verbose_name="تلفن")
+    Text = models.TextField(max_length=10000, verbose_name="متن پیام")
+
+    class Meta:
+        verbose_name = "اطلاعات کاربران"
+        verbose_name_plural = "ماژول کاربران"
+
+    def __str__(self):
+        return self.FullName

@@ -42,6 +42,7 @@ class GalleryListByCategory(ListView):
             raise Http404('صفحه مورد نظر یافت نشد')
         return Gallery.objects.get_gallery_by_category(gallery_name)
 
+
 def Gallery_List_partial(request):
     gallery_list = Gallery.objects.all()
     latest_gallery = Gallery.objects.order_by('-id').all()[:4]
