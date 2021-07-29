@@ -5,7 +5,7 @@
 }
 
 .lavin-about {
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
 }
 
 .lavin-inner-section {
-    width: 55%;
+    width: 50%;
     float: right;
     background-color: #fdfdfd;
     padding: 14px;

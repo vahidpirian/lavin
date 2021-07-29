@@ -1,17 +1,18 @@
-const slides = document.querySelector(".lavin-slide").children;
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
+jQuery(document).ready(function($) {
+
 let index = 0;
+const slides = $('.lavin-slide');
+const prev = $('.prev').first();
+const next = $('.next').first();
 
-prev.addEventListener("click", function () {
-    prevSlide()
-})
+function changeSlide() {
+    for(let i=0; i < slides.length; i++) {
+        slides[i].classList.remove("active")
+    }
+    slides[index].classList.add('active');
+}
 
-next.addEventListener("click", function () {
-    nextSlide()
-})
-
-function prevSlide() {
+prev.click(function() {
     if(index == 0) {
         index = slides.length - 1;
     }
@@ -19,19 +20,15 @@ function prevSlide() {
         index--;
     }
     changeSlide();
-}
+});
 
-function nextSlide() {
+next.click(function() {
     if (index == slides.length - 1) {
         index = 0;
     } else {
         index++;
     }
     changeSlide();
-}
+});
 
-function changeSlide() {
-    for(let i=0; i < slides.length; i++) {
-        slides[1].classList.remove("active")
-    }
-}
+});

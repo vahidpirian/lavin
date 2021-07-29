@@ -2,12 +2,41 @@
     margin-top: 40px;
     margin-bottom: 40px;
     background-color: #eee;
-    height: 500px;
+    /* height: 500px;*/
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
-.lavin-image-home {
-    margin-top: 50px;
+.more-gallery {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    margin: 50px 1000px 0 0;
+    background-color: #e0ad23;
+    font-size: 14px;
+    padding: 10px 10px;
+    color: whitesmoke;
+    transition: all 0.5s ease-in;
 }
+
+.lavin-more-gallery .more-gallery:hover {
+    font-size: 14px;
+    border: 1px solid #34495e;
+    border-top-left-radius: 20px;
+    background-color: transparent;
+    color: #34405e;
+    text-decoration: none;
+}
+
+.more-gallery h2 {
+    font-size: 20px;
+}
+
+/*.lavin-image-home {
+    margin-top: 50px;
+}*/
 
 .items {
     display: flex;
@@ -82,13 +111,13 @@ form.frm button {
 }
 
 form.example::after {
-  content: "";
-  clear: both;
-  display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 form.example button:hover {
-  background: #0b7dda;
+    background: #0b7dda;
 }
 
 .items a:link {
@@ -154,7 +183,6 @@ form.example button:hover {
     left: 50%;
     height: 100px;
     width: 100px;
-    /*shape-outside: url("static_cdn/static_root/images/main-image.jpg");*/
     background-color: white;
     border-radius: 50%;
 }
@@ -166,17 +194,9 @@ form.example button:hover {
 
 .btn-primary {
     background-color: #5556b5 !important;
-/*    background-color: #f9e634 !important;*/
     color: #f9e634 !important;
     border-color: black !important;
-    /*border-color: #f9e634 !important;*/
 }
-
-/* ############# START ARTICLES #############*/
-
-
-
-/* ############# END ARTICLES #############*/
 
 .social-media {
     display: flex;
@@ -214,11 +234,3 @@ form.example button:hover {
     height: 200px !important;
     width: 500px !important;
 }
-
-/*
-############   BANNER   ###############*/
-/*.hdr-content {
-    max-width: 650px;
-    margin: 100px;
-    margin-top: 150px;
-}*/

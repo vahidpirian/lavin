@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 1024px) {
     .lavin-nav-links {
-        width: 40%;
+        width: 60%;
     }
 }
 
@@ -87,10 +87,10 @@
         position: absolute;
         right: 0;
         height: 90vh;
-        top: 6vh;
+        top: 6.4vh;
         padding-top: 25px;
         padding-bottom: 25px;
-        background-color: #0e2a42;
+        background-color: #354a6c;
         z-index: 1000;
         flex-direction: column;
         align-items: center;
@@ -99,11 +99,11 @@
         transition: transform 0.5s ease-in;
     }
 
-    .lavin-nav-links a:hover {
+/*    .lavin-nav-links a:hover {
         background-color: #fcfc3c;
         color: #999999;
-        padding: 60px 300px;
-    }
+        padding: 60px 80px;
+    }*/
 
     .nav-links li {
         opacity: 0;

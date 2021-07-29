@@ -92,6 +92,10 @@
     color: #000;
 }
 
+.search-box input {
+    width: 150px;
+}
+
 .footer-bottom {
     text-align: center;
     color: #999;
@@ -108,7 +112,7 @@
 
 .footer-created-by {
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .footer-created-by i {
@@ -124,7 +128,7 @@
     color: #999;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .footer-footer {
         width: 100%;
         position: relative;

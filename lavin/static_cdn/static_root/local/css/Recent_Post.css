@@ -78,13 +78,17 @@
     color: red;
 }
 
+.news-content a:hover {
+    text-decoration: none;
+}
+
 .news-content p {
     margin-bottom: 15px;
     text-align: justify;
     margin-top: 20px;
 }
 
-.news-content a {
+.news-content .btn-read {
     font-size: 14px;
     background-color: #e0ad23;
     padding: 10px;
@@ -92,7 +96,12 @@
     transition: all 0.5s ease-in;
 }
 
-.news-content a:hover {
+.news-content h5 {
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.news-content .btn-read:hover {
     font-size: 14px;
     border: 1px solid #34495e;
     border-top-left-radius: 20px;
