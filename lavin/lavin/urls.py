@@ -15,6 +15,7 @@ urlpatterns = [
     path('', include('gallery.urls')),
     path('', include('banner.urls')),
     path('', include('aboutinfo.urls')),
+    path('', include('about_dr.urls')),
     path('ckeditor', include('ckeditor_uploader.urls')),
 ]
 

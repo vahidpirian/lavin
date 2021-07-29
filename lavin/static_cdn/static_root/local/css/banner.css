@@ -52,22 +52,22 @@ body {
     width: 50%;
 }
 
-.lavin-home .lavin-caption h1{
+.lavin-home .lavin-caption h1 {
     font-size: 42px;
+    margin-right: 60px;
     color: #000000;
-    margin: 0;
 }
 
 .lavin-home .lavin-slide.active .lavin-caption h1 {
     animation: captionText .5s forwards;
     opacity: 0;
     animation-delay: 1s;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .lavin-home .lavin-caption p {
     font-size: 18px;
-    margin: 15px 0 30px;
+    margin: 15px 60px 30px;
     color: #222222;
 }
 
@@ -80,6 +80,7 @@ body {
 .lavin-home .lavin-caption a {
     display: inline-block;
     padding: 10px 30px;
+    margin-right: 60px;
     background-color: #0e2a42;
     text-decoration: none;
     color: #fcfc3c;
@@ -144,8 +145,31 @@ body {
     .lavin-home .lavin-caption h1 {
         width: 100%;
         font-size: 15px;
+        margin-right: 20px;
+    }
+
+    .lavin-home .lavin-caption p {
+        font-size: 12px;
+        margin-right: 20px;
+    }
+
+    .lavin-home .lavin-caption a {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .lavin-home .lavin-caption h1 {
+        width: 100%;
+        font-size: 20px;
+        margin-right: 40px;
     }
     .lavin-home .lavin-caption p {
-        font-size: 10px;
+        font-size: 12px;
+        margin-right: 40px;
+    }
+
+    .lavin-home .lavin-caption a {
+        margin-right: 40px;
     }
 }
