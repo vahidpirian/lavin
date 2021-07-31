@@ -85,3 +85,11 @@ class SearchArticles(ListView):
         if query is not None:
             return Article.objects.search(query)
         return Article.objects.none()
+
+
+def Article_Footer_partial(request):
+    latest_article = Article.objects.order_by('id').all()[:4]
+    context = {
+        'latest_article': grouper(4, latest_article)
+    }
+    return render(request, "articles/article_footer_partial.html", context)

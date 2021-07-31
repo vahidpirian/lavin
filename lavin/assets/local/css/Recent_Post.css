@@ -29,24 +29,6 @@
     transform: scale(1);
 }
 
-.deat {
-    background: #f89406 none repeat scroll 0 0;
-    height: 70px;
-    left: 0;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 70px;
-    padding: 10px;
-}
-
-.deat span {
-    display: block;
-    color: white;
-    font-weight: 700;
-    font-size: 16px;
-}
-
 .news-content {
     padding: 20px;
     margin-left: 3px;
@@ -59,7 +41,6 @@
 
 .news-content .fa {
     padding: 10px 10px;
-    cursor: pointer;
 }
 
 .news-content .fa-facebook {

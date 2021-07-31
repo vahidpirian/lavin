@@ -21,6 +21,14 @@ def Contact_Form(request):
 
     return render(request, 'contact-us.html', context)
 
+
+def Contact_Partial(request):
+    contact = Contact_Us.objects.first()
+    context = {
+        'contact': contact
+    }
+
+    return render(request, 'contact_partial.html', context)
 # def WhatsAppData(phone, message, name):
 #     import time
 #     import webbrowser as web

@@ -10,7 +10,7 @@ class ABOUT_US(models.Model):
 
     class Meta:
         verbose_name = "درباره ما"
-        verbose_name_plural = "ماژول درباره ما"
+        verbose_name_plural = "درباره ما"
 
     def __str__(self):
         return self.title

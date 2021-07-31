@@ -9,7 +9,7 @@ class ABOUT_DR(models.Model):
 
     class Meta:
         verbose_name = "درباره دکتر"
-        verbose_name_plural = "ماژول درباره دکتر"
+        verbose_name_plural = "درباره دکتر"
 
     def __str__(self):
         return self.title

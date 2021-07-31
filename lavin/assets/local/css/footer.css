@@ -9,7 +9,7 @@
 .main-cnt {
     display: flex;
     font-size: 14px;
-    margin-right: 4em;
+    margin-right: 3em;
 }
 
 .main-cnt .box {
@@ -43,6 +43,11 @@
     text-decoration: none;
     list-style: none;
     line-height: 30px;
+    text-align: center;
+}
+
+.link-area h2 {
+    text-align: center;
 }
 
 .h-box a {
@@ -128,7 +133,7 @@
     color: #999;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
     .footer-footer {
         width: 100%;
         position: relative;
@@ -143,7 +148,15 @@
     .main-cnt .box {
         margin: 5px 0;
     }
-    
+
+    .link-area h2 {
+        text-align: right;
+    }
+
+    .h-box {
+        text-align: right;
+    }
+
     .search-box input {
         width: 120px;
     }

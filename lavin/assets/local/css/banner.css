@@ -49,7 +49,7 @@ body {
 }
 
 .lavin-home .lavin-caption {
-    width: 50%;
+    width: 80%;
 }
 
 .lavin-home .lavin-caption h1 {
@@ -151,6 +151,7 @@ body {
     .lavin-home .lavin-caption p {
         font-size: 12px;
         margin-right: 20px;
+        padding: 0;
     }
 
     .lavin-home .lavin-caption a {

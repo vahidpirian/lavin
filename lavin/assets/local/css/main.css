@@ -1,3 +1,7 @@
+.Logo a:hover {
+    text-decoration: none;
+}
+
 .lavin-gallery-home {
     margin-top: 40px;
     margin-bottom: 40px;
