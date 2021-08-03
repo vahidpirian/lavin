@@ -6,7 +6,7 @@ from django.core.files.storage import FileSystemStorage
 class ABOUT_US(models.Model):
     title = models.CharField(max_length=120, verbose_name="عنوان")
     description = models.TextField(max_length=10000, verbose_name="توضیحات")
-    image = models.FileField(upload_to="about-us", null=True, blank=True, verbose_name="عکس")
+    image = models.FileField(upload_to="about-us", verbose_name="عکس")
 
     class Meta:
         verbose_name = "درباره ما"

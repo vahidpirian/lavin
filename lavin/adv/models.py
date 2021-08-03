@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class ADV(models.Model):
-    video = models.FileField(upload_to="adv_files", null=True, blank=True, verbose_name="فیلم تبلیغاتی")
+    video = models.FileField(upload_to="adv_files", verbose_name="فیلم تبلیغاتی")
 
     class Meta:
         verbose_name = "تبلیغ"

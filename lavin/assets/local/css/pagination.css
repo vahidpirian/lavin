@@ -7,3 +7,7 @@
 .pagination > li > a {
     color: #000000 !important;
 }
+
+.active {
+    z-index: 0;
+}

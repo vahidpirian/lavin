@@ -12,8 +12,8 @@ class GalleryManager(models.Manager):
 class Gallery(models.Model):
     title = models.CharField(max_length=200, verbose_name="عنوان")
     description = models.TextField(max_length=1000, verbose_name="توضیحات")
-    image = models.FileField(upload_to="Galleries/", null=True, blank=True, verbose_name="تصاویر")
-    categories = models.ManyToManyField(Category, blank=True, verbose_name="دسته بندی ها")
+    image = models.FileField(upload_to="Galleries/", verbose_name="تصاویر")
+    categories = models.ManyToManyField(Category, verbose_name="دسته بندی ها")
 
     objects = GalleryManager()
 

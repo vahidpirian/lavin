@@ -27,10 +27,9 @@ class ArticleManager(models.Manager):
 
 class Article(models.Model):
     title = models.CharField(max_length=200, verbose_name="عنوان")
-    description = RichTextUploadingField(blank=True, null=True, verbose_name="توضیحات")
-    # description = models.TextField(max_length=1000000, verbose_name="توضیحات")
-    image = models.FileField(upload_to="Articles/", null=True, blank=True, verbose_name="تصاویر")
-    categories = models.ManyToManyField(Category, blank=True, verbose_name="دسته بندی ها")
+    description = RichTextUploadingField(verbose_name="توضیحات")
+    image = models.FileField(upload_to="Articles/", verbose_name="تصاویر")
+    categories = models.ManyToManyField(Category, verbose_name="دسته بندی ها")
 
     objects = ArticleManager()
 

@@ -13,7 +13,7 @@ def grouper(n, iterable):
 
 class GalleryListView(ListView):
     template_name = "Files/gallery_list.html"
-    paginate_by = 12
+    paginate_by = 1
 
     def get_context_data(self, *args, object_list=None, **kwargs):
         latest_article = Article.objects.order_by('-id').all()[:4]
@@ -27,7 +27,7 @@ class GalleryListView(ListView):
 
 class GalleryListByCategory(ListView):
     template_name = "Files/gallery_list.html"
-    paginate_by = 12
+    paginate_by = 1
 
     def get_context_data(self, *args, object_list=None, **kwargs):
         latest_article = Article.objects.order_by('-id').all()[:4]
