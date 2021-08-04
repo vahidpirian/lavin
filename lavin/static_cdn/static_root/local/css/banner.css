@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.lavin-home {
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.lavin-home .lavin-slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: none;
+    padding: 0 15px;
+    animation: slide 2s ease;
+}
+
+.lavin-home .lavin-slide.active {
+    display: flex;
+}
+
+@keyframes slide {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.lavin-banner-container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.lavin-home .lavin-banner-container {
+    flex-grow: 1;
+}
+
+.lavin-home .lavin-caption {
+    width: 80%;
+}
+
+.lavin-home .lavin-caption h1 {
+    font-size: 42px;
+    margin-right: 60px;
+    color: #000000;
+}
+
+.lavin-home .lavin-slide.active .lavin-caption h1 {
+    animation: captionText .5s forwards;
+    opacity: 0;
+    animation-delay: 1s;
+    letter-spacing: 2px;
+}
+
+.lavin-home .lavin-caption p {
+    font-size: 18px;
+    margin: 15px 60px 30px;
+    color: #222222;
+}
+
+.lavin-home .lavin-slide.active .lavin-caption p {
+    animation: captionText .5s forwards;
+    opacity: 0;
+    animation-delay: 1.2s;
+}
+
+.lavin-home .lavin-caption a {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 60px;
+    background-color: #0e2a42;
+    text-decoration: none;
+    color: #fcfc3c;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.lavin-home .lavin-caption a:hover {
+    background-color: #fcfc3c;
+    color: #999999;
+}
+
+.lavin-home .lavin-slide.active .lavin-caption a {
+    animation: captionText .5s forwards;
+    opacity: 0;
+    animation-delay: 1.4s;
+}
+
+@keyframes captionText {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.lavin-home .lavin-controls .prev,
+.lavin-home .lavin-controls .next {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    color: #fcfc3c;
+    background-color: #0e2a42;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.lavin-home .lavin-controls .prev {
+    left: 0;
+}
+
+.lavin-home .lavin-controls .next {
+    right: 0;
+}
+
+.lavin-home .lavin-controls .prev:hover,
+.lavin-home .lavin-controls .next:hover {
+    background-color: #fcfc3c;
+    color: #999999;
+}
+
+@media screen and (max-width: 768px) {
+    .lavin-home .lavin-caption h1 {
+        width: 100%;
+        font-size: 15px;
+        margin-right: 20px;
+    }
+
+    .lavin-home .lavin-caption p {
+        font-size: 12px;
+        margin-right: 20px;
+        padding: 0;
+    }
+
+    .lavin-home .lavin-caption a {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .lavin-home .lavin-caption h1 {
+        width: 100%;
+        font-size: 20px;
+        margin-right: 40px;
+    }
+    .lavin-home .lavin-caption p {
+        font-size: 12px;
+        margin-right: 40px;
+    }
+
+    .lavin-home .lavin-caption a {
+        margin-right: 40px;
+    }
+}

@@ -1,0 +1,20 @@
+<section class="lavin-home">
+    <div class="lavin-slider">
+        {% for slide in object_list %}
+        <div class="lavin-slide {{ forloop.first | yesno:'active,' }}"
+             style="background-image: url('{{ slide.image.url }}')">
+            <div class="container lavin-banner-container">
+                <div class="lavin-caption">
+                    <h1>{{ slide.title }}</h1>
+                    <p>{{ slide.description }}</p>
+                    <a href="{{ slide.links }}">بیشتر بخوانید</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="lavin-controls">
+        <div class="prev"><i class="fa fa-caret-left"></i></div>
+        <div class="next"><i class="fa fa-caret-right"></i></div>
+    </div>
+</section>

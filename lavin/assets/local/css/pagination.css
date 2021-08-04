@@ -1,0 +1,13 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination > li > a {
+    color: #000000 !important;
+}
+
+.active {
+    z-index: 0;
+}

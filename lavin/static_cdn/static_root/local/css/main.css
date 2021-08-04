@@ -1,0 +1,240 @@
+.Logo a:hover {
+    text-decoration: none;
+}
+
+.lavin-gallery-home {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #eee;
+    /* height: 500px;*/
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.more-gallery {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    margin: 50px 1000px 0 0;
+    background-color: #e0ad23;
+    font-size: 14px;
+    padding: 10px 10px;
+    color: whitesmoke;
+    transition: all 0.5s ease-in;
+}
+
+.lavin-more-gallery .more-gallery:hover {
+    font-size: 14px;
+    border: 1px solid #34495e;
+    border-top-left-radius: 20px;
+    background-color: transparent;
+    color: #34405e;
+    text-decoration: none;
+}
+
+.more-gallery h2 {
+    font-size: 20px;
+}
+
+/*.lavin-image-home {
+    margin-top: 50px;
+}*/
+
+.items {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-left: 2px solid #878787;
+}
+
+.main-page {
+    border-right: 2px solid #878787;
+}
+
+.main-menu {
+    width: 60%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.logo {
+    margin: 5px;
+    padding-top: 15px;
+}
+
+.img {
+    filter: brightness(40%);
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    color: white;
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.gallery-dash {
+    margin-bottom: 20px;
+}
+
+form.frm input[type=text] {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    width: 25%;
+    color: black;
+    background: #624977;
+}
+
+form.frm button {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    width: 10%;
+    padding: 10px;
+    background: #f9e634;
+    color: black;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+.items a:link {
+    color: black;
+}
+
+.items a:visited {
+    color: black;
+}
+
+.items:hover {
+    background-color: #f9e634;
+}
+
+.items:active {
+    background-color: #f9e634;
+    color: #878787;
+}
+
+.items a:active {
+    background-color: #f9e634;
+    color: #878787;
+}
+
+.items a:hover {
+    background-color: #f9e634;
+    text-decoration: none;
+    color: #878787;
+}
+
+/*
+########### About Us ##########
+*/
+
+.abt-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f9e634;
+    margin: 0;
+    padding: 0;
+    height: 800px;
+}
+
+.abt-nav {
+    background-color: red;
+    width: 100%;
+    height: 50px;
+}
+
+.abt-img {
+    background-color: blue;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+}
+
+.dot {
+    position: absolute;
+    padding: 5px;
+    top: 93%;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.cont-art {
+    display: flex;
+    margin-top: 100px;
+}
+
+.btn-primary {
+    background-color: #5556b5 !important;
+    color: #f9e634 !important;
+    border-color: black !important;
+}
+
+.social-media {
+    display: flex;
+    background-color: #878787;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.item-sm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 50px;
+
+}
+
+.Logo {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.thumbnail {
+    margin: 5px;
+}
+
+.caption {
+    text-align: center;
+}
+
+.img-size {
+    height: 200px !important;
+    width: 500px !important;
+}

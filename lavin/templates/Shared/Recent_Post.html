@@ -1,0 +1,52 @@
+{% load static %}
+<section class="latest-news-area" id="latest">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section_title">
+                    <h2>پست های اخیر</h2>
+                    <div class="dash"></div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="news-active">
+                {% for lst_article in latest_articles %}
+                {% for article in lst_article %}
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="latest-news-wrap">
+                        <div class="news-img">
+                            <img src="{{ article.image.url }}" alt="" class="img-responsive">
+                        </div>
+                        <div class="news-content">
+                            <!--<a href="">
+                                <i class="fa fa-facebook"></i>
+                            </a>-->
+                            <a href="https://telegram.me/share/url?url=localhost{{ article.get_absolute_url }}">
+                                <i class="fa fa-telegram"></i>
+                            </a>
+                            <a href="https://web.whatsapp.com/send?text={{ article.title }} localhost:8000{{ article.get_absolute_url }}">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <h5>
+                                {{ article.title | truncatewords:10 }}
+                            </h5>
+                            <p>
+                                <!--{{ article.description | truncatewords:10 | safe }}-->
+                            </p><br>
+                            <a class="btn-read" href="{{ article.get_absolute_url }}">بیشتر بخوانید</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+</section>

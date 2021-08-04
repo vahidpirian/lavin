@@ -1,0 +1,51 @@
+{% load static %}
+{% load render_partial %}
+{% block content %}
+<footer class="footer-footer">
+    <div class="main-cnt">
+        <ul class="footer-contact box">
+            {% render_partial 'contact_footer_partial' %}
+        </ul>
+        <ul class="footer-links box">
+            <li class="link-area">
+                <h2>لینک ها</h2>
+                <ul class="box h-box">
+                    <li><a href="/">خانه</a></li>
+                    <li><a href="/articles">مقالات</a></li>
+                    <li><a href="/gallery">گالری تصاویر</a></li>
+                    <li><a href="/aboutus">درباره ما</a></li>
+                    <li><a href="contact-us">تماس با ما</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="import-info box">
+            {% render_partial 'article_footer_partial' %}
+        </ul>
+
+        <ul class="lavin-search box">
+            <li>
+                <form action="" class="form-search">
+                    <div class="search-box">
+                        <button class="lavin-btn-lavin" type="submit">جستجو</button>
+                        <form action="/article/search" method="get">
+                            <input type="text" name="q" id="" value="{{ request.GET.q }}">
+                        </form>
+                    </div>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer-bottom">
+        <p>تمام حقوق مادی و معنوی این وبسایت متعلق به کلینیک زیبایی لاوین می باشد.</p>
+    </div>
+
+    <div class="footer-created-by">
+        <p>
+            <a href="https://instagram.com/vahid_pirian">طراحی شده توسط ؛ وحید پیریان<i class="fa fa-instagram"></i></a>
+        </p>
+    </div>
+
+</footer>
+{% endblock %}

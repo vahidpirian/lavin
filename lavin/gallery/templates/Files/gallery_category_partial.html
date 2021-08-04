@@ -1,0 +1,7 @@
+<h2>دسته بندی ها</h2>
+<ul>
+    <li><a href="/gallery"><i class="fas fa-caret-left"></i>همه تصاویر</a></li>
+    {% for gallery in galleries %}
+        <li><a href="/gallery/{{ gallery.name }}"><i class="fas fa-caret-left"></i>{{ gallery.title }}</a></li>
+    {% endfor %}
+</ul>

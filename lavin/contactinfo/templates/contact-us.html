@@ -1,0 +1,43 @@
+{% extends "Shared/_MainLayout.html" %}
+{% load static %}
+{% block content %}
+<section class="lavin-section-contact" style="background-image: url('{{ object_list.image.url }}')">
+    <div class="lavin-content">
+        <h2>{{ object_list.title }}</h2>
+        <p>{{ object_list.description }}</p>
+    </div>
+    <div class="container lavin-contact-container">
+        <div class="lavin-contactinfo">
+            <div class="lavin-box">
+                <div class="lavin-icon"><i class="fa fa-location-arrow" aria-hidden="true"></i></div>
+                <div class="lavin-text">
+                    <h3>آدرس</h3>
+                    <p>{{ object_list.address }}</p>
+                </div>
+            </div>
+            <div class="lavin-box">
+                <div class="lavin-icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                <div class="lavin-text">
+                    <h3>تلفن</h3>
+                    <p>{{ object_list.phone }}</p>
+                </div>
+            </div>
+            <div class="lavin-box">
+                <div class="lavin-icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="lavin-text">
+                    <h3>ایمیل</h3>
+                    <p>{{ object_list.email }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="lavin-contact-form">
+            <h2>ارسال پیام</h2>
+            <form action="contact-us" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="ارسال">
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

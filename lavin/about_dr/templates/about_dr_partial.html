@@ -1,0 +1,20 @@
+{% load static %}
+{% block content %}
+
+<div class="post">
+    <div class="blog-post">
+    <div class="blog-post_img">
+        <img src="{{ object_list.image.url }}" alt="">
+    </div>
+    <div class="blog-post_info">
+        <div class="blog-post_date">
+        </div>
+        <h1 class="blog-post_title">{{ object_list.title }}</h1>
+        <p class="blog-post_text">
+            {{ object_list.description }}
+        </p>
+        <a href="{{ object_list.address }}" class="blog-post_cta">اینستاگرام</a>
+    </div>
+</div>
+</div>
+{% endblock %}

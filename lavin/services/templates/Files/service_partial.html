@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="Logo">
+        {% for service in services %}
+        <div class="row col-sm-6 col-md-3">
+            <a href="{{ service.url }}">
+                <div class="thumbnail">
+                <img src="{{ service.image.url }}" alt="...">
+                <div class="caption">
+                    <h4>{{ service.title }}</h4>
+                </div>
+            </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,31 @@
+{% load static %}
+<section class="lavin-gallery-home" id="latest">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section_title">
+                    <h2>گالری تصاویر</h2>
+                    <div class="dash"></div>
+                </div>
+            </div>
+            <br>
+            <br>
+                <div class="gallery-home">
+                    {% for lst_gallery in latest_gallery %}
+                    {% for gallery in lst_gallery %}
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="video-container">
+                            <div class="video">
+                                <video src="{{ gallery.image.url }}"></video>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+            <div class="col-md-12 col-sm-5 col-xs-5 lavin-more-gallery">
+                <a class="more-gallery" href="/gallery">تصاویر بیشتر</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,73 @@
+{% extends "Shared/_MainLayout.html" %}
+{% load static %}
+{% load render_partial %}
+{% block content %}
+<section class="lavin-area-article" id="latest">
+    <div class="container">
+        <div class="row lavin-container-article">
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="wrapper">
+                        <div class="sidebar">
+                            {% render_partial 'articles_categories_partial' %}
+                        </div>
+                    </div>
+                </div>
+            <div class="news-active-article">
+                {% for article in object_list %}
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="latest-news-wrap">
+                        <div class="news-img">
+                            <img src="{{ article.image.url }}" alt="" class="img-responsive">
+                        </div>
+                        <div class="news-content">
+                            <a href="https://telegram.me/share/url?url=https://drazadehsadeghi.ir{{ article.get_absolute_url }}">
+                                <i class="fa fa-telegram"></i>
+                            </a>
+                            <a href="https://web.whatsapp.com/send?text=https://drazadehsadeghi.ir{{ article.get_absolute_url }}">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <h5>
+                                {{ article.title | truncatewords:10 }}
+                            </h5>
+                            <!--<p>
+                                {{ article.description | truncatewords:10 | safe }}
+                            </p>-->
+                            <br>
+                            <a class="btn-read" href="{{ article.get_absolute_url }}">بیشتر بخوانید</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container page">
+    <div class="row">
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}">صفحه قبلی</a></li>
+                {% endif %}
+                {% for page in paginator.page_range %}
+                {% if page == page_obj.number %}
+                <li class="active"><a href="?page={{ page }}">{{ page }}</a></li>
+                {% else %}
+                <li><a href="?page={{ page }}">{{ page }}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.paginator.num_pages }}">صفحه بعدی</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+
+{% include "Shared/Recent_Post.html" %}
+{% endblock %}
